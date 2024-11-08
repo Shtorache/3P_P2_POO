@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} Engenharia de Software {% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'eng_software/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="{% url 'index' %}">Início</a>
+            <a href="{% url 'curso' %}">O Curso</a>
+            <a href="{% url 'publico_alvo' %}">Público-Alvo</a>
+            <a href="{% url 'investimento' %}">Investimento</a>
+            <a href="{% url 'processo_seletivo' %}">Processo Seletivo</a>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Univassouras - Engenharia de Software</p>
+    </footer>
+</body>
+</html>
